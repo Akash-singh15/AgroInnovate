@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background { fill: #f0f8ff; }
+    .water { fill: #2196f3; }
+    .drop { fill: #2196f3; }
+    .field { fill: #8bc34a; }
+    .soil { fill: #795548; }
+    .pipe { fill: none; stroke: #607d8b; stroke-width: 3; }
+  </style>
+  
+  <!-- Background -->
+  <rect class="background" x="0" y="0" width="300" height="200"/>
+  
+  <!-- Field layers -->
+  <g>
+    <!-- Soil -->
+    <rect class="soil" x="20" y="130" width="260" height="50"/>
+    
+    <!-- Field/Ground level -->
+    <rect class="field" x="20" y="125" width="260" height="5"/>
+  </g>
+  
+  <!-- Water drops -->
+  <g class="drop">
+    <path d="M70,80 C70,100 50,100 50,80 C50,60 60,40 60,40 C60,40 70,60 70,80 Z">
+      <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="transform" attributeType="XML" type="translate" 
+               from="0 0" to="0 50" dur="2s" repeatCount="indefinite" />
+    </path>
+    
+    <path d="M110,70 C110,90 90,90 90,70 C90,50 100,30 100,30 C100,30 110,50 110,70 Z">
+      <animate attributeName="opacity" values="1;0" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="transform" attributeType="XML" type="translate" 
+               from="0 0" to="0 60" dur="2.5s" repeatCount="indefinite" />
+    </path>
+    
+    <path d="M150,85 C150,105 130,105 130,85 C130,65 140,45 140,45 C140,45 150,65 150,85 Z">
+      <animate attributeName="opacity" values="1;0" dur="1.8s" repeatCount="indefinite" />
+      <animate attributeName="transform" attributeType="XML" type="translate" 
+               from="0 0" to="0 45" dur="1.8s" repeatCount="indefinite" />
+    </path>
+    
+    <path d="M190,75 C190,95 170,95 170,75 C170,55 180,35 180,35 C180,35 190,55 190,75 Z">
+      <animate attributeName="opacity" values="1;0" dur="2.2s" repeatCount="indefinite" />
+      <animate attributeName="transform" attributeType="XML" type="translate" 
+               from="0 0" to="0 55" dur="2.2s" repeatCount="indefinite" />
+    </path>
+    
+    <path d="M230,80 C230,100 210,100 210,80 C210,60 220,40 220,40 C220,40 230,60 230,80 Z">
+      <animate attributeName="opacity" values="1;0" dur="2.3s" repeatCount="indefinite" />
+      <animate attributeName="transform" attributeType="XML" type="translate" 
+               from="0 0" to="0 50" dur="2.3s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Drip irrigation system -->
+  <g>
+    <!-- Main pipe -->
+    <path class="pipe" d="M40,40 H260" />
+    
+    <!-- Vertical pipes -->
+    <path class="pipe" d="M60,40 V80" />
+    <path class="pipe" d="M100,40 V70" />
+    <path class="pipe" d="M140,40 V85" />
+    <path class="pipe" d="M180,40 V75" />
+    <path class="pipe" d="M220,40 V80" />
+    
+    <!-- Plants -->
+    <g transform="translate(60, 125)">
+      <path d="M0,0 C-10,-10 -5,-20 0,-15 C5,-20 10,-10 0,0 Z" fill="#4caf50" />
+      <path d="M0,0 V-20" stroke="#4caf50" stroke-width="2" />
+    </g>
+    
+    <g transform="translate(100, 125)">
+      <path d="M0,0 C-10,-10 -5,-20 0,-15 C5,-20 10,-10 0,0 Z" fill="#4caf50" />
+      <path d="M0,0 V-20" stroke="#4caf50" stroke-width="2" />
+    </g>
+    
+    <g transform="translate(140, 125)">
+      <path d="M0,0 C-10,-10 -5,-20 0,-15 C5,-20 10,-10 0,0 Z" fill="#4caf50" />
+      <path d="M0,0 V-20" stroke="#4caf50" stroke-width="2" />
+    </g>
+    
+    <g transform="translate(180, 125)">
+      <path d="M0,0 C-10,-10 -5,-20 0,-15 C5,-20 10,-10 0,0 Z" fill="#4caf50" />
+      <path d="M0,0 V-20" stroke="#4caf50" stroke-width="2" />
+    </g>
+    
+    <g transform="translate(220, 125)">
+      <path d="M0,0 C-10,-10 -5,-20 0,-15 C5,-20 10,-10 0,0 Z" fill="#4caf50" />
+      <path d="M0,0 V-20" stroke="#4caf50" stroke-width="2" />
+    </g>
+  </g>
+  
+  <!-- Water conservation text -->
+  <text x="55" y="185" font-family="Arial" font-size="12" fill="#333">Water Conservation in Agriculture</text>
+</svg>

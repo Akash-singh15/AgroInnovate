@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background { fill: #f0f8ff; }
+    .rice { fill: #8bc34a; }
+    .water { fill: #bbdefb; }
+    .field { fill: #795548; }
+  </style>
+  
+  <!-- Background -->
+  <rect class="background" x="0" y="0" width="300" height="200"/>
+  
+  <!-- Rice field with water -->
+  <rect class="water" x="20" y="120" width="260" height="60"/>
+  <rect class="field" x="20" y="180" width="260" height="20"/>
+  
+  <!-- Rice plants -->
+  <g class="rice">
+    <!-- Row 1 -->
+    <g transform="translate(50, 130)">
+      <path d="M0,0 C-5,-15 -10,-30 -5,-40 M0,0 C5,-15 10,-30 5,-40 M0,0 L0,-50" stroke="#8bc34a" stroke-width="2"/>
+      <ellipse cx="0" cy="-50" rx="3" ry="6"/>
+    </g>
+    <g transform="translate(80, 130)">
+      <path d="M0,0 C-5,-15 -10,-30 -5,-40 M0,0 C5,-15 10,-30 5,-40 M0,0 L0,-50" stroke="#8bc34a" stroke-width="2"/>
+      <ellipse cx="0" cy="-50" rx="3" ry="6"/>
+    </g>
+    <g transform="translate(110, 130)">
+      <path d="M0,0 C-5,-15 -10,-30 -5,-40 M0,0 C5,-15 10,-30 5,-40 M0,0 L0,-50" stroke="#8bc34a" stroke-width="2"/>
+      <ellipse cx="0" cy="-50" rx="3" ry="6"/>
+    </g>
+    
+    <!-- Row 2 -->
+    <g transform="translate(140, 130)">
+      <path d="M0,0 C-5,-15 -10,-30 -5,-40 M0,0 C5,-15 10,-30 5,-40 M0,0 L0,-50" stroke="#8bc34a" stroke-width="2"/>
+      <ellipse cx="0" cy="-50" rx="3" ry="6"/>
+    </g>
+    <g transform="translate(170, 130)">
+      <path d="M0,0 C-5,-15 -10,-30 -5,-40 M0,0 C5,-15 10,-30 5,-40 M0,0 L0,-50" stroke="#8bc34a" stroke-width="2"/>
+      <ellipse cx="0" cy="-50" rx="3" ry="6"/>
+    </g>
+    <g transform="translate(200, 130)">
+      <path d="M0,0 C-5,-15 -10,-30 -5,-40 M0,0 C5,-15 10,-30 5,-40 M0,0 L0,-50" stroke="#8bc34a" stroke-width="2"/>
+      <ellipse cx="0" cy="-50" rx="3" ry="6"/>
+    </g>
+    
+    <!-- Row 3 -->
+    <g transform="translate(230, 130)">
+      <path d="M0,0 C-5,-15 -10,-30 -5,-40 M0,0 C5,-15 10,-30 5,-40 M0,0 L0,-50" stroke="#8bc34a" stroke-width="2"/>
+      <ellipse cx="0" cy="-50" rx="3" ry="6"/>
+    </g>
+    <g transform="translate(260, 130)">
+      <path d="M0,0 C-5,-15 -10,-30 -5,-40 M0,0 C5,-15 10,-30 5,-40 M0,0 L0,-50" stroke="#8bc34a" stroke-width="2"/>
+      <ellipse cx="0" cy="-50" rx="3" ry="6"/>
+    </g>
+  </g>
+  
+  <!-- Sun -->
+  <circle cx="40" cy="40" r="20" fill="#ffeb3b"/>
+  <g>
+    <line x1="40" y1="10" x2="40" y2="0" stroke="#ffeb3b" stroke-width="2"/>
+    <line x1="40" y1="70" x2="40" y2="80" stroke="#ffeb3b" stroke-width="2"/>
+    <line x1="10" y1="40" x2="0" y2="40" stroke="#ffeb3b" stroke-width="2"/>
+    <line x1="70" y1="40" x2="80" y2="40" stroke="#ffeb3b" stroke-width="2"/>
+    <line x1="20" y1="20" x2="13" y2="13" stroke="#ffeb3b" stroke-width="2"/>
+    <line x1="60" y1="60" x2="67" y2="67" stroke="#ffeb3b" stroke-width="2"/>
+    <line x1="20" y1="60" x2="13" y2="67" stroke="#ffeb3b" stroke-width="2"/>
+    <line x1="60" y1="20" x2="67" y2="13" stroke="#ffeb3b" stroke-width="2"/>
+  </g>
+</svg>

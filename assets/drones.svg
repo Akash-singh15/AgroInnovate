@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background { fill: #f0f8ff; }
+    .field { fill: #8bc34a; }
+    .drone-body { fill: #616161; }
+    .drone-arm { fill: #9e9e9e; }
+    .propeller { fill: #424242; }
+    .camera { fill: #2196f3; }
+    .sun { fill: #ffeb3b; }
+    .cloud { fill: white; }
+  </style>
+  
+  <!-- Background (Sky) -->
+  <rect class="background" x="0" y="0" width="300" height="200"/>
+  
+  <!-- Sun -->
+  <circle class="sun" cx="260" cy="40" r="20"/>
+  
+  <!-- Clouds -->
+  <g class="cloud">
+    <ellipse cx="60" cy="35" rx="25" ry="15"/>
+    <ellipse cx="85" cy="35" rx="20" ry="10"/>
+    <ellipse cx="40" cy="35" rx="15" ry="8"/>
+    
+    <ellipse cx="180" cy="55" rx="30" ry="15"/>
+    <ellipse cx="155" cy="55" rx="20" ry="12"/>
+    <ellipse cx="200" cy="55" rx="15" ry="10"/>
+  </g>
+  
+  <!-- Field -->
+  <rect class="field" x="0" y="150" width="300" height="50"/>
+  
+  <!-- Field patterns (rows) -->
+  <g fill="#66bb6a">
+    <rect x="10" y="155" width="280" height="2"/>
+    <rect x="10" y="165" width="280" height="2"/>
+    <rect x="10" y="175" width="280" height="2"/>
+    <rect x="10" y="185" width="280" height="2"/>
+    <rect x="10" y="195" width="280" height="2"/>
+  </g>
+  
+  <!-- Drone -->
+  <g transform="translate(150, 80)">
+    <!-- Drone Body -->
+    <rect class="drone-body" x="-15" y="-15" width="30" height="30" rx="5"/>
+    
+    <!-- Drone Arms -->
+    <rect class="drone-arm" x="-45" y="-5" width="30" height="10" rx="2"/>
+    <rect class="drone-arm" x="15" y="-5" width="30" height="10" rx="2"/>
+    <rect class="drone-arm" x="-5" y="-45" width="10" height="30" rx="2"/>
+    <rect class="drone-arm" x="-5" y="15" width="10" height="30" rx="2"/>
+    
+    <!-- Propellers -->
+    <g class="propeller">
+      <g transform="translate(-45, 0)">
+        <rect x="-15" y="-2" width="30" height="4" rx="2">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.5s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="-2" y="-15" width="4" height="30" rx="2">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.5s" repeatCount="indefinite"/>
+        </rect>
+        <circle cx="0" cy="0" r="3"/>
+      </g>
+      
+      <g transform="translate(45, 0)">
+        <rect x="-15" y="-2" width="30" height="4" rx="2">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.5s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="-2" y="-15" width="4" height="30" rx="2">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.5s" repeatCount="indefinite"/>
+        </rect>
+        <circle cx="0" cy="0" r="3"/>
+      </g>
+      
+      <g transform="translate(0, -45)">
+        <rect x="-15" y="-2" width="30" height="4" rx="2">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.5s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="-2" y="-15" width="4" height="30" rx="2">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.5s" repeatCount="indefinite"/>
+        </rect>
+        <circle cx="0" cy="0" r="3"/>
+      </g>
+      
+      <g transform="translate(0, 45)">
+        <rect x="-15" y="-2" width="30" height="4" rx="2">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.5s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="-2" y="-15" width="4" height="30" rx="2">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="0.5s" repeatCount="indefinite"/>
+        </rect>
+        <circle cx="0" cy="0" r="3"/>
+      </g>
+    </g>
+    
+    <!-- Camera -->
+    <g class="camera">
+      <rect x="-5" y="5" width="10" height="15" rx="2"/>
+      <circle cx="0" cy="10" r="3" fill="#0d47a1"/>
+    </g>
+    
+    <!-- Sensor lights -->
+    <circle cx="-10" cy="-10" r="2" fill="red">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="10" cy="-10" r="2" fill="green">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Light beams from drone to field -->
+  <path d="M150,100 L130,150 M150,100 L170,150" stroke="#2196f3" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  
+  <!-- Text -->
+  <text x="90" y="30" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Agricultural Drone Technology</text>
+</svg>

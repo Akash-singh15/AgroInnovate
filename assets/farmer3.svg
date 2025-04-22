@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .skin { fill: #bf8e68; }
+    .clothes { fill: #dca7a7; }
+    .hair { fill: #594e41; }
+    .field { fill: #f5f2e7; }
+  </style>
+  
+  <!-- Background -->
+  <rect class="field" x="0" y="0" width="200" height="200" rx="10"/>
+  
+  <!-- Farmer -->
+  <g transform="translate(100, 100)">
+    <!-- Hair -->
+    <path class="hair" d="M0,-60 C-25,-60 -35,-45 -35,-30 C-35,-15 -25,-10 -20,-10 C-20,-10 -20,-15 -20,-15 L-20,-30 C-20,-40 -10,-50 0,-50 C10,-50 20,-40 20,-30 L20,-15 C20,-15 20,-10 20,-10 C25,-10 35,-15 35,-30 C35,-45 25,-60 0,-60 Z"/>
+    
+    <!-- Face -->
+    <circle class="skin" cx="0" cy="-20" r="25"/>
+    
+    <!-- Eyes -->
+    <ellipse cx="-10" cy="-20" rx="3" ry="4" fill="#000"/>
+    <ellipse cx="10" cy="-20" rx="3" ry="4" fill="#000"/>
+    
+    <!-- Smile -->
+    <path d="M-12,-10 C-5,0 5,0 12,-10" stroke="#000" stroke-width="1.5" fill="none"/>
+    
+    <!-- Beard -->
+    <path class="hair" d="M0,-10 C-15,-10 -20,0 -15,10 C-10,5 -5,5 0,5 C5,5 10,5 15,10 C20,0 15,-10 0,-10 Z"/>
+    
+    <!-- Body/Clothes -->
+    <rect class="clothes" x="-25" y="5" width="50" height="50" rx="5"/>
+    
+    <!-- Arms -->
+    <rect class="clothes" x="-40" y="5" width="15" height="35" rx="5"/>
+    <rect class="clothes" x="25" y="5" width="15" height="35" rx="5"/>
+  </g>
+</svg>

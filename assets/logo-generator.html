@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroInnovate Logo Generator</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            background-color: white;
+        }
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>AgroInnovate Logo Generator</h1>
+    <canvas id="logoCanvas" width="400" height="200"></canvas>
+    <div class="controls">
+        <button id="downloadBtn">Download Logo</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.getElementById('logoCanvas');
+            const ctx = canvas.getContext('2d');
+            const downloadBtn = document.getElementById('downloadBtn');
+
+            // Clear canvas with white background
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw a leaf shape
+            function drawLeaf(x, y, size) {
+                ctx.save();
+                ctx.beginPath();
+                ctx.translate(x, y);
+                
+                // Draw the leaf
+                ctx.moveTo(0, -size/2);
+                ctx.bezierCurveTo(
+                    size/2, -size/3,
+                    size/2, size/3,
+                    0, size/2
+                );
+                ctx.bezierCurveTo(
+                    -size/2, size/3,
+                    -size/2, -size/3,
+                    0, -size/2
+                );
+                
+                // Create gradient for the leaf
+                const gradient = ctx.createLinearGradient(0, -size/2, 0, size/2);
+                gradient.addColorStop(0, '#4CAF50');
+                gradient.addColorStop(1, '#2E7D32');
+                
+                ctx.fillStyle = gradient;
+                ctx.fill();
+                
+                // Add a vein to the leaf
+                ctx.beginPath();
+                ctx.moveTo(0, -size/2);
+                ctx.lineTo(0, size/2);
+                ctx.strokeStyle = '#1B5E20';
+                ctx.lineWidth = size/30;
+                ctx.stroke();
+                
+                ctx.restore();
+            }
+
+            // Draw a gear shape
+            function drawGear(x, y, outerRadius, innerRadius, spikes) {
+                ctx.save();
+                ctx.beginPath();
+                ctx.translate(x, y);
+                
+                for (let i = 0; i < spikes * 2; i++) {
+                    const radius = i % 2 === 0 ? outerRadius : innerRadius;
+                    const angle = (Math.PI / spikes) * i;
+                    
+                    if (i === 0) {
+                        ctx.moveTo(radius * Math.cos(angle), radius * Math.sin(angle));
+                    } else {
+                        ctx.lineTo(radius * Math.cos(angle), radius * Math.sin(angle));
+                    }
+                }
+                
+                ctx.closePath();
+                
+                // Create gradient for the gear
+                const gradient = ctx.createRadialGradient(0, 0, innerRadius, 0, 0, outerRadius);
+                gradient.addColorStop(0, '#FFA000');
+                gradient.addColorStop(1, '#FF6F00');
+                
+                ctx.fillStyle = gradient;
+                ctx.fill();
+                
+                // Add inner circle
+                ctx.beginPath();
+                ctx.arc(0, 0, innerRadius * 0.6, 0, Math.PI * 2);
+                ctx.fillStyle = '#FFD54F';
+                ctx.fill();
+                
+                ctx.restore();
+            }
+
+            // Draw the logo elements
+            drawGear(130, 100, 50, 35, 8);
+            drawLeaf(130, 100, 70);
+            
+            // Add text
+            ctx.font = 'bold 42px Arial';
+            ctx.fillStyle = '#333';
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('Agro', 190, 85);
+            
+            ctx.font = 'bold 28px Arial';
+            ctx.fillStyle = '#4CAF50';
+            ctx.fillText('Innovate', 190, 115);
+
+            // Download functionality
+            downloadBtn.addEventListener('click', function() {
+                const dataURL = canvas.toDataURL('image/png');
+                const link = document.createElement('a');
+                link.download = 'agroinnovate-logo.png';
+                link.href = dataURL;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        });
+    </script>
+</body>
+</html> 

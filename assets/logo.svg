@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .leaf { fill: #4CAF50; }
+    .text { fill: #333; font-family: 'Arial', sans-serif; font-weight: bold; }
+  </style>
+  <g>
+    <!-- Plant/Leaf Icon -->
+    <path class="leaf" d="M35,10 C20,10 15,25 15,35 C15,40 20,45 25,45 C35,45 45,25 45,15 C45,10 40,5 35,5 C30,5 25,10 25,15 C25,25 35,35 40,35 C43,35 45,33 45,30 Z" />
+    <circle class="leaf" cx="25" cy="20" r="3" />
+    <circle class="leaf" cx="35" cy="25" r="2" />
+    
+    <!-- Text -->
+    <text class="text" x="55" y="30" font-size="20">AgroInnovate</text>
+  </g>
+</svg>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .sky { fill: #e6f7ff; }
+    .field { fill: #93c47d; }
+    .sun { fill: #f1c232; }
+    .farmer { fill: #8a5f41; }
+    .clothes { fill: #6fa8dc; }
+    .tech { fill: #cccccc; stroke: #666666; stroke-width: 2; }
+    .plant { fill: #38761d; }
+  </style>
+  
+  <!-- Background -->
+  <rect class="sky" x="0" y="0" width="600" height="250"/>
+  <rect class="field" x="0" y="250" width="600" height="150"/>
+  
+  <!-- Sun -->
+  <circle class="sun" cx="520" cy="80" r="50"/>
+  
+  <!-- Plants in the field -->
+  <g class="plants">
+    <!-- Rows of crops -->
+    <g transform="translate(50, 280)">
+      <path class="plant" d="M0,0 C5,-10 10,-10 15,0 M7.5,-10 L7.5,20" />
+    </g>
+    <g transform="translate(80, 280)">
+      <path class="plant" d="M0,0 C5,-10 10,-10 15,0 M7.5,-10 L7.5,20" />
+    </g>
+    <g transform="translate(110, 280)">
+      <path class="plant" d="M0,0 C5,-10 10,-10 15,0 M7.5,-10 L7.5,20" />
+    </g>
+    <g transform="translate(140, 280)">
+      <path class="plant" d="M0,0 C5,-10 10,-10 15,0 M7.5,-10 L7.5,20" />
+    </g>
+    <g transform="translate(170, 280)">
+      <path class="plant" d="M0,0 C5,-10 10,-10 15,0 M7.5,-10 L7.5,20" />
+    </g>
+    
+    <!-- More rows of crops -->
+    <g transform="translate(50, 320)">
+      <path class="plant" d="M0,0 C5,-10 10,-10 15,0 M7.5,-10 L7.5,20" />
+    </g>
+    <g transform="translate(80, 320)">
+      <path class="plant" d="M0,0 C5,-10 10,-10 15,0 M7.5,-10 L7.5,20" />
+    </g>
+    <g transform="translate(110, 320)">
+      <path class="plant" d="M0,0 C5,-10 10,-10 15,0 M7.5,-10 L7.5,20" />
+    </g>
+    <g transform="translate(140, 320)">
+      <path class="plant" d="M0,0 C5,-10 10,-10 15,0 M7.5,-10 L7.5,20" />
+    </g>
+    <g transform="translate(170, 320)">
+      <path class="plant" d="M0,0 C5,-10 10,-10 15,0 M7.5,-10 L7.5,20" />
+    </g>
+  </g>
+  
+  <!-- Farmer -->
+  <g transform="translate(300, 300)">
+    <!-- Body -->
+    <circle class="farmer" cx="0" cy="-70" r="25"/> <!-- Head -->
+    <rect class="clothes" x="-20" y="-45" width="40" height="60"/> <!-- Torso -->
+    <rect class="farmer" x="-20" y="15" width="10" height="35"/> <!-- Left leg -->
+    <rect class="farmer" x="10" y="15" width="10" height="35"/> <!-- Right leg -->
+    <rect class="farmer" x="-30" y="-40" width="10" height="40"/> <!-- Left arm -->
+    
+    <!-- Technology (tablet/phone) -->
+    <rect class="tech" x="20" y="-40" width="20" height="30" rx="2"/>
+    <line x1="24" y1="-35" x2="36" y2="-35" stroke="#333" stroke-width="1"/>
+    <line x1="24" y1="-30" x2="36" y2="-30" stroke="#333" stroke-width="1"/>
+    <line x1="24" y1="-25" x2="32" y2="-25" stroke="#333" stroke-width="1"/>
+  </g>
+  
+  <!-- Simple tractor/tech equipment -->
+  <g transform="translate(450, 340)">
+    <rect class="tech" x="0" y="-40" width="80" height="30"/>
+    <circle class="tech" cx="15" cy="0" r="15"/>
+    <circle class="tech" cx="65" cy="0" r="20"/>
+  </g>
+</svg>

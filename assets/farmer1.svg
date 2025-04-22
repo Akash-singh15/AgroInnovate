@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .skin { fill: #c68a4c; }
+    .clothes { fill: #2f5597; }
+    .turban { fill: #70ad47; }
+    .field { fill: #f5f2e7; }
+  </style>
+  
+  <!-- Background -->
+  <rect class="field" x="0" y="0" width="200" height="200" rx="10"/>
+  
+  <!-- Farmer -->
+  <g transform="translate(100, 100)">
+    <!-- Turban -->
+    <path class="turban" d="M0,-60 C-25,-60 -40,-45 -40,-30 C-40,-15 -25,0 0,0 C25,0 40,-15 40,-30 C40,-45 25,-60 0,-60 Z"/>
+    
+    <!-- Face -->
+    <circle class="skin" cx="0" cy="-20" r="30"/>
+    
+    <!-- Eyes -->
+    <ellipse cx="-10" cy="-25" rx="3" ry="4" fill="#000"/>
+    <ellipse cx="10" cy="-25" rx="3" ry="4" fill="#000"/>
+    
+    <!-- Smile -->
+    <path d="M-15,-10 C-10,-5 10,-5 15,-10" stroke="#000" stroke-width="2" fill="none"/>
+    
+    <!-- Moustache -->
+    <path d="M-15,-15 C-10,-12 -5,-12 0,-15 C5,-12 10,-12 15,-15" stroke="#000" stroke-width="2" fill="#000"/>
+    
+    <!-- Body/Clothes -->
+    <rect class="clothes" x="-30" y="0" width="60" height="60" rx="5"/>
+    
+    <!-- Arms -->
+    <rect class="clothes" x="-45" y="0" width="15" height="40" rx="5"/>
+    <rect class="clothes" x="30" y="0" width="15" height="40" rx="5"/>
+  </g>
+</svg>
